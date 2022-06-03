@@ -1,0 +1,57 @@
+#parameters  go in the right-hand side
+schema: schema_name_in_db
+year_date: "2020"
+calander_quarter: 4 
+
+#table names
+db_tables:
+  table1: the_real_table_name_shown_in_databse{year_date}
+  table2: another_table_name_shown_in_database{year_date}
+
+#Some flat files used as an input if they are not in the database
+name_program_uses: ../location_folder/file_name.csv
+
+paths:
+  output: ../foldername_where_you_want_to_save_the_outputs/
+  sql_path: ../folder_for_sql_files/
+  data_path: ../folder_for_downloading_data/
+
+#business_rules: making dictionaries to store data values. key:value
+##scienario1
+bucketing_data_values_dict: {
+  "type1": "data_field1= value1" AND data_field2=value_b",
+  "type2": "data_field1= value2" AND data_field2=value_a"
+}
+
+##scienario2
+comparison:
+  pair1: [type1, type2]
+  
+##scienario3
+continuous_field:
+- DE1
+- DE2
+- DE3
+continuous_field_dict: {
+  "DE1": 0,
+  "DE2": 1,
+  "DE3": 0
+}
+categorical_field:
+- DE4
+- DE5
+- DE6
+
+unique_identifier:
+- DE0
+
+#scienario4- subset condition based on sql
+subsets:
+  income_single_family:
+    slice_name: Income for Single Family
+    filename: income_subsets_single_family.csv
+    where: ../sql/income_subsets_single_family.sql
+    field_list: ["income", "property value"]
+    field: "income"
+
+
