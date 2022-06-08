@@ -63,6 +63,13 @@ class my_function(object):
             self.sql_path=self.config_param["paths"]["sql_path"].format(year=self.config_param["year"])
             self.data_path=self.config_param["paths"]["data_path"].format(year=self.config_param["year"])
 
+            self.db_params = {
+                "host": os.environ.get("KEY_FOR_HOST"),
+                "user": os.environ.get("KEY_FOR_USER"),
+                "dbname": os.environ.get("KEY_FOR_DBNAME"),
+                "password": os.environ.get("KEY_FOR_PWD")
+            }
+
     def connection(self,params):
         try:
             connection=psycopg2.connect(
@@ -73,7 +80,15 @@ class my_function(object):
             return connection, connection.cursor()
         except psycopg2.Error as e:
             print("bad connection attempt, ", e)
-
+   
+    def connection(self,params):
+        try:
+            connection=psycopg2.connect(
+            **params)
+            return connection, connection.cursor()
+        except psycopg2.Error as e:
+            print("bad connection attempt, ", e)
+            
     def stat(self,df,categorical_field,field="field_value"):
         f={"field_value": ['count','min','max','mean','median']}
         if len(categorical_field)>0:
