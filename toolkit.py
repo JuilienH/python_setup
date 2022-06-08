@@ -70,16 +70,16 @@ class my_function(object):
                 "password": os.environ.get("KEY_FOR_PWD")
             }
 
-    def connection(self,params):
-        try:
-            connection=psycopg2.connect(
-            host="the_host_address",
-            user="the_user_name",
-            dbname="data_base_name",
-            password="the_password")
-            return connection, connection.cursor()
-        except psycopg2.Error as e:
-            print("bad connection attempt, ", e)
+#    def connection(self,params):
+#        try:
+#            connection=psycopg2.connect(
+#            host="the_host_address",
+#            user="the_user_name",
+#            dbname="data_base_name",
+#            password="the_password")
+#            return connection, connection.cursor()
+#        except psycopg2.Error as e:
+#            print("bad connection attempt, ", e)
    
     def connection(self,params):
         try:
