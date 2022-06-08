@@ -48,13 +48,13 @@ jupyter-jupyter-7997df465-gsn27:~/analytics/Data_quality$
 The stem script for psycopg2.coonect is like 
 conn=psycopg2.connect(host="real_host_info",user="real_user_name",dbname="real_db_name", password="the_password").
 However, you want to hide the credential in shared space, you need to set envrionment variables to store them, and in the code, you just need to get the environment variables to let the system autofill them in. Here is how to do it in the Terminal
-First, to figure out which shell you are running 
+1. First, to figure out which shell you are running 
 echo $SHELL
 It will give an output like this:
 /bin/zsh
-And then use the command export to define the environment variable (KEY) and its actual value that you want to hide eventually
+2. And then use the command export to define the environment variable (KEY) and its actual value that you want to hide eventually
 export KEY=value
-Once this is done, simply type the following and it should return the value you jsut set
+3. Once this is done, simply type the following and it should return the value you jsut set
 eho $KEY
 
 In the toolkit.py, we can use connection=psycopg2.connect(
