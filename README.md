@@ -1,4 +1,4 @@
-# file organization
+# File organization
 Scripts, inputs and outputs are recommended to be in the same folder. You can specify the whole directory to make sure the program points to the file. But if the scripts and files are in the same folder, you can shorten the directory it as ../subfolder/file name.extension
 ## The program flows starts at toolkit.py where the first step is to load all parameters located in the configuration file (yaml). THe toolkit defines all the functions to be used as a class. In main.py, every funtion will be called out in the form: class_name.function_name(paramater=value_defined_in_yaml). For example, my_function.sub_sql(year_date=year_date)
 # yaml-configuration file
