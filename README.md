@@ -1,14 +1,16 @@
-# file organization
+# File organization
 Scripts, inputs and outputs are recommended to be in the same folder. You can specify the whole directory to make sure the program points to the file. But if the scripts and files are in the same folder, you can shorten the directory it as ../subfolder/file name.extension
-## The program flows starts at toolkit.py where the first step is to load all parameters located in the configuration file (yaml). THe toolkit defines all the functions to be used as a class. In main.py, every funtion will be called out in the form: class_name.function_name(paramater=value_defined_in_yaml). For example, my_function.sub_sql(year_date=year_date)
-# yaml-configuration file
+
+The program flows starts at toolkit.py where the first step is to load all parameters located in the configuration file (yaml). THe toolkit defines all the functions to be used as a class. In main.py, every funtion will be called out in the form: class_name.function_name(paramater=value_defined_in_yaml). For example, my_function.sub_sql(year_date=year_date)
+
+## yaml-configuration file
 A YAML file includes all the parameters for database information, file paths, SQL queries, filters for selecting data.
-# python-functions as the toolkit
+## python-functions as the toolkit
 Defining project-specific functions are saved as python objects. These functions are collectively stored as a python program. This is called out as a toolkit in the main python script. Statistical tests or standard calculations that should stay constant can be saved here.
-# python-main scripts for business rules
+## python-main scripts for business rules
 The main python scripts have all calculation rules for answering business questions. It can be visualization plots or tables for statistics. Most development changes should go in here while the yaml and python toolkit stay constant most of the time. 
 
-# SQL
+## SQL
 Depending on the type of databases the query works against, there are different python libraries to use. You can streamline the processes: write queries to get an output and then load them in Jupyternotebook to continue data wrangling. For example, postgresSQL is a database and pgAdmin is the application used for running queries. Using the python library, psycopg2, you can wrap up SQL code in python programming without hopping between differerent applications.
 
 # Virtual Environment
