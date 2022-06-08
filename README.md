@@ -28,7 +28,7 @@ The importance of creating a virtual environment for each project, even your pro
 
 When in JupterLab where Anaconda is no longer used,  the steps to create a virtual envionrment, named as test_env are as follows:
 1. open Terminal
-2. type cd./new_folder
+2. type cd ./new_folder
 jupyter-jupyter-7997df465-gsn27:~/analytics$ cd ./Data_quality
 3. type python3 -m venv myenv
 jupyter-jupyter-7997df465-gsn27:~/analytics/Data_quality$ python3 -m venv myenv 
@@ -36,7 +36,7 @@ jupyter-jupyter-7997df465-gsn27:~/analytics/Data_quality$ python3 -m venv myenv
 4. type source myenv/bin/activate
 jupyter-jupyter-7997df465-gsn27:~/analytics/Data_quality$ source myenv/bin/activ
 ate
-5. type python -m ipykernel install --user --name=myenv (myenv) jupyter-jupyter-7997df465-gsn27:~/analytics/Data_quality$ python -m ipyk
+5. type ipython kernel install --user --name=myenv (myenv) jupyter-jupyter-7997df465-gsn27:~/analytics/Data_quality$ python -m ipyk
 ernel install --user --name=myenv
 Installed kernelspec myenv in /home/hmda/.local/share/jupyter/kernels/myenv
 (myenv) jupyter-jupyter-7997df465-gsn27:~/analytics/Data_quality$
