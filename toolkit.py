@@ -168,7 +168,7 @@ class my_function(object):
         cur=conn.cursor()
         cur.execute(count_sql.format(year_date=year_date))
         count_df=pd.DataFrame(cur.fetchall(),column=[desc[0] for desc in cur.description])
-        count_df.to_csv("../folder_saving_output/file_name_{year_date}.csv".format(year_date=year_date),index=false)
+        count_df.to_csv("../folder_saving_output/file_name_{suffix}.csv".format(year_date=year_date),index=false)
         conn.close()
         return sql_logic_1
 

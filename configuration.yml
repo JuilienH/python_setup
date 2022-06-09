@@ -1,12 +1,11 @@
 #parameters  go in the right-hand side
 schema: schema_name_in_db
-year_date: "2020"
-calander_quarter: 4 
+suffix: "yearnumber"
 
 #table names
 db_tables:
-  table1: the_real_table_name_shown_in_databse{year_date}
-  table2: another_table_name_shown_in_database{year_date}
+  table1: the_real_table_name_shown_in_databse{suffix}
+  table2: another_table_name_shown_in_database{suffix}
 
 #Some flat files used as an input if they are not in the database
 name_program_uses: ../location_folder/file_name.csv
@@ -47,11 +46,11 @@ unique_identifier:
 
 #scienario4- subset condition based on sql
 subsets:
-  income_single_family:
-    slice_name: Income for Single Family
-    filename: income_subsets_single_family.csv
-    where: ../sql/income_subsets_single_family.sql
-    field_list: ["income", "property value"]
-    field: "income"
+  Sub_population_name:
+    slice_name: Subpopulation name
+    filename: sub_population_name.csv
+    where: ../sql/sub_population_name.sql
+    field_list: ["slice_DE_1", "slice_DE_2"]
+    field: "slice_DE_1"
 
 
