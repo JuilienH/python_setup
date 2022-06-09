@@ -122,8 +122,7 @@ class my_function(object):
             "field_category": self.config_param["subsets"][slice]["slice_name"]
             ,"slice": slice
             ,"subset_cond": self.config_param["subsets"][slice]["where"]
-            ,"field": self.config_param["subsets"[slice]["field"] 
-            }
+            ,"field": self.config_param["subsets"[slice]["field"]}
      
      if not sql_fields or "table" not in sql_fields.keys() or sql_fields["table"] is None:
         sql_fields["table"]=self.config_param["db_tables"]["table1"]

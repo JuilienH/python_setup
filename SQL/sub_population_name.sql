@@ -1,0 +1,2 @@
+WHERE id NOT IN (SELECT id FROM schema2.table1)
+AND DE3 NOT BETWEEN 1 AND 2
